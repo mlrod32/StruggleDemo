@@ -19,6 +19,15 @@ public class Rect
 	double xAcceleration;
 	double yAcceleration;
 	
+	public Rect(double x, double y, int w, int h)
+{
+		this.x = x;
+		this.y = y;
+		this.w = w;
+		this.h = h;
+		
+	}
+	
 	public void draw(Graphics g) 
 	{
 		g.drawRect((int)x, (int)y, w, h);
@@ -32,6 +41,13 @@ public class Rect
 	
 	
 	//Movement Fucntions
+	
+	public void moveBy(double dx, double dy) 
+	{
+		x += dx;
+		y += dy;
+	}
+	
 	public void setVelocity(double xVel, double yVel)
 	{
 		xVelocity = xVel;
